@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>სასტუმროს დაჯავშნის სააგენტო - Hotel Booking Agency</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <i class="fas fa-hotel"></i>
+        <h1>HotelBook</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">მთავარი</a></li>
+          <li><a href="#rooms">ოთახები</a></li>
+          <li><a href="#services">სერვისები</a></li>
+          <li><a href="#contact">კონტაქტი</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <h1>მოგესალმებით სასტუმროს დაჯავშნის სააგენტოში</h1>
+          <p>
+            აღმოაჩინეთ საუკეთესო სასტუმროები და დაჯავშნეთ თქვენი სრულყოფილი
+            შვებულება
+          </p>
+        </div>
+      </section>
+
+      <section id="rooms" class="rooms-section">
+        <h2>ხელმისაწვდომი ოთახები</h2>
+        <div class="rooms-grid">
+          <div class="room-card">
+            <div class="room-image">
+              <i class="fas fa-bed"></i>
+            </div>
+            <div class="room-info">
+              <h3>სტანდარტული ოთახი</h3>
+              <p class="room-type">ტიპი: სტანდარტული</p>
+              <p class="room-price">ფასი: ₾120 / ღამე</p>
+              <p class="room-status available">სტატუსი: ხელმისაწვდომი</p>
+              <button class="select-room-btn">
+                <i class="fas fa-plus"></i> არჩევა
+              </button>
+            </div>
+          </div>
+
+          <div class="room-card">
+            <div class="room-image">
+              <i class="fas fa-crown"></i>
+            </div>
+            <div class="room-info">
+              <h3>დელუქს ოთახი</h3>
+              <p class="room-type">ტიპი: დელუქს</p>
+              <p class="room-price">ფასი: ₾200 / ღამე</p>
+              <p class="room-status available">სტატუსი: ხელმისაწვდომი</p>
+              <button class="select-room-btn">
+                <i class="fas fa-plus"></i> არჩევა
+              </button>
+            </div>
+          </div>
+
+          <div class="room-card">
+            <div class="room-image">
+              <i class="fas fa-gem"></i>
+            </div>
+            <div class="room-info">
+              <h3>სუიტი</h3>
+              <p class="room-type">ტიპი: სუიტი</p>
+              <p class="room-price">ფასი: ₾350 / ღამე</p>
+              <p class="room-status available">სტატუსი: ხელმისაწვდომი</p>
+              <button class="select-room-btn">
+                <i class="fas fa-plus"></i> არჩევა
+              </button>
+            </div>
+          </div>
+
+          <div class="room-card">
+            <div class="room-image">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="room-info">
+              <h3>ოჯახური ოთახი</h3>
+              <p class="room-type">ტიპი: ოჯახური</p>
+              <p class="room-price">ფასი: ₾280 / ღამე</p>
+              <p class="room-status occupied">სტატუსი: დაკავებული</p>
+              <button class="select-room-btn" disabled>
+                <i class="fas fa-times"></i> არ არის ხელმისაწვდომი
+              </button>
+            </div>
+          </div>
+
+          <div class="room-card">
+            <div class="room-image">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="room-info">
+              <h3>პრეზიდენტული სუიტი</h3>
+              <p class="room-type">ტიპი: პრეზიდენტული</p>
+              <p class="room-price">ფასი: ₾500 / ღამე</p>
+              <p class="room-status available">სტატუსი: ხელმისაწვდომი</p>
+              <button class="select-room-btn">
+                <i class="fas fa-plus"></i> არჩევა
+              </button>
+            </div>
+          </div>
+
+          <div class="room-card">
+            <div class="room-image">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="room-info">
+              <h3>ეკონომ ოთახი</h3>
+              <p class="room-type">ტიპი: ეკონომ</p>
+              <p class="room-price">ფასი: ₾80 / ღამე</p>
+              <p class="room-status maintenance">სტატუსი: რემონტში</p>
+              <button class="select-room-btn" disabled>
+                <i class="fas fa-wrench"></i> რემონტში
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="booking" class="booking-section">
+        <div class="booking-container">
+          <div class="basket-section">
+            <h2><i class="fas fa-shopping-cart"></i> თქვენი არჩევანი</h2>
+            <div class="basket">
+              <div class="basket-item-sample">
+                <div class="basket-item-info">
+                  <h4>სტანდარტული ოთახი</h4>
+                  <p>3 ღამე × ₾120 = ₾360</p>
+                </div>
+                <button class="remove-item" title="ამოღება">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <div class="basket-item-sample">
+                <div class="basket-item-info">
+                  <h4>დელუქს ოთახი</h4>
+                  <p>3 ღამე × ₾200 = ₾600</p>
+                </div>
+                <button class="remove-item" title="ამოღება">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+            <div class="total-section">
+              <p>სულ ღირებულება: <span class="total-price">₾960</span></p>
+            </div>
+          </div>
+
+          <div class="booking-form-section">
+            <h2>დაჯავშნის ფორმა</h2>
+            <form>
+              <div class="form-group">
+                <label for="guest-name">სახელი და გვარი:</label>
+                <input type="text" id="guest-name" name="guest-name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">ელ-ფოსტა:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">ტელეფონი:</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+
+              <div class="form-group">
+                <label for="check-in">შესვლის თარიღი:</label>
+                <input type="date" id="check-in" name="check-in" required />
+              </div>
+
+              <div class="form-group">
+                <label for="days">დღეების რაოდენობა:</label>
+                <div class="days-counter">
+                  <button type="button">-</button>
+                  <input
+                    type="number"
+                    id="days"
+                    name="days"
+                    value="3"
+                    min="1"
+                    max="30"
+                  />
+                  <button type="button">+</button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="guests">სტუმრების რაოდენობა:</label>
+                <select id="guests" name="guests">
+                  <option value="1">1 სტუმარი</option>
+                  <option value="2" selected>2 სტუმარი</option>
+                  <option value="3">3 სტუმარი</option>
+                  <option value="4">4 სტუმარი</option>
+                  <option value="5">5+ სტუმარი</option>
+                </select>
+              </div>
+
+              <button type="submit" class="book-btn">
+                <i class="fas fa-calendar-check"></i> დაჯავშნა
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking-status">
+        <div class="status-container">
+          <div class="status-success">
+            <i class="fas fa-check-circle"></i>
+            <h2>დაჯავშნის სტატუსი</h2>
+            <p>დაჯავშნა მზადაა! ამ ადგილას გამოჩნდება დადასტურება.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>HotelBook</h3>
+          <p>საუკეთესო სასტუმროების დაჯავშნის სერვისი</p>
+        </div>
+        <div class="footer-section">
+          <h3>კონტაქტი</h3>
+          <p><i class="fas fa-phone"></i> +995 555 123 456</p>
+          <p><i class="fas fa-envelope"></i> info@hotelbook.ge</p>
+        </div>
+        <div class="footer-section">
+          <h3>სოციალური ქსელები</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 HotelBook. ყველა უფლება დაცულია.</p>
+      </div>
+    </footer>
+  </body>
+</html>
