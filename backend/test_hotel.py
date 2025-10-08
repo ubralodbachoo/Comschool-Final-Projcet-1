@@ -1,8 +1,9 @@
 import unittest
 from app import Room, Customer, Hotel
+
+
 #class of test hotel booking
 class TestHotelBooking(unittest.TestCase):  #test hotel booking
-    #function to set up
     def setUp(self):
         self.room = Room(101, "Single", 50, 1)
         self.customer = Customer("Bacho", 150)
