@@ -4,7 +4,8 @@ import logging
 logging.basicConfig(
     filename="bookings.log",
     level=logging.INFO,
-    format="%(asctime)s - %(message)s"
+    format="%(asctime)s - %(message)s",
+    encoding="UTF-8"
 )
 
 #ოთახის კლასი სადაც გვაქვს ოთახის ნომერი, ოთახის ტიპი, ფასი ღამეში, ხელმისაწვდომია თუ არა, მაქსიმალური სტუმრები
@@ -148,3 +149,35 @@ class Hotel:
             print(f"ოთახი {room_number}-ის ჯავშანი გაუქმდა. ${refund_amount} დაუბრუნდა {customer.name}-ს.")
         else:
             print("ასეთი booking ვერ მოიძებნა.")
+
+
+# სასტუმროსთვის ოთახების შექმნა
+room1 = Room(room_number=101, room_type="Single", price_per_night=50.0, max_guests=1)
+room2 = Room(room_number=102, room_type="Double", price_per_night=80.0, max_guests=2)
+room3 = Room(room_number=103, room_type="Suite", price_per_night=150.0, max_guests=4)
+
+# სასტუმროს შექმნა
+hotel = Hotel(name="Grand Hotel", rooms=[room1, room2, room3])
+
+# მომხმარებლის შექმნა
+customer1 = Customer(name="Giorgi", budget=200.0)
+customer2 = Customer(name="Nino", budget=300.0)
+
+# ჯავშნის გაკონტროლება (მაგალითი)
+hotel.book_room_for_customer(customer1, room_number=101, nights=2)  # Single Room
+hotel.book_room_for_customer(customer2, room_number=103, nights=1)  # Suite
+
+# ხელმისაწვდომი ოთახების ნახვა
+available_rooms = hotel.show_available_rooms()
+for room in available_rooms:
+    print(room)
+
+# ჯავშნის ინფორმაციის ნახვა
+print(customer1.show_booking_summary())
+print(customer2.show_booking_summary())
+
+# ჯავშნის გაუქმება
+hotel.cancel_booking(customer1, room_number=101)
+
+# გაუქმების შემდგომი ჯავშნის სტატუსი
+print(customer1.show_booking_summary())
